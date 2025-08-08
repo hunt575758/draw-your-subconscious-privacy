@@ -1,16 +1,106 @@
-<!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/mqalgnlv"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InkSoul｜綠意中的安靜創作</title>
+
+  <!-- 字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- 樣式 -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- 分享預覽 -->
+  <meta property="og:title" content="InkSoul｜綠意中的安靜創作">
+  <meta property="og:description" content="每天一小步，讓線條替你說話。留下 Email 加入封測，收到任務與溫柔回饋。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hunt575758.github.io/draw-your-subconscious-privacy/">
+</head>
+<body>
+
+  <!-- 頁首 Hero -->
+  <header class="hero">
+    <div class="orb"></div>
+    <div class="wrap">
+      <h1>InkSoul｜綠意中的安靜創作</h1>
+      <p class="sub">不必會畫畫，也能在一筆一畫間找到呼吸。上傳你的塗鴉，AI 以療癒語氣回饋情緒線索與今日可行的一小步。</p>
+      <a class="cta" href="#apply">加入封測</a>
+      <a class="ghost" href="#about">了解更多</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- 特色 -->
+    <section class="grid" id="about">
+      <div class="card">
+        <h2>🌿 放鬆，而非表現</h2>
+        <p>沒有評分、沒有對錯。InkSoul 更像一座小森林，讓你在安靜裡看見自己。</p>
+      </div>
+      <div class="card">
+        <h2>🧘 溫柔 AI 回饋</h2>
+        <p>參考藝術治療語氣，給你理解、界線與小小建議，不做診斷、只做陪伴。</p>
+      </div>
+    </section>
+
+    <!-- 任務範例 -->
+    <section>
+      <h2>今日任務範例</h2>
+      <div class="list">
+        <div class="li"><span class="dot"></span><div><strong>情緒氣候圖</strong><br><span class="small">只用三種顏色，畫出今天像什麼天氣。</span></div></div>
+        <div class="li"><span class="dot"></span><div><strong>一口呼吸，一筆線</strong><br><span class="small">吸氣落筆、呼氣收筆，連續 10 次。</span></div></div>
+        <div class="li"><span class="dot"></span><div><strong>給自己的葉子</strong><br><span class="small">畫一片葉，寫下它此刻需要的養分。</span></div></div>
+      </div>
+    </section>
+
+    <!-- 申請加入（Formspree） -->
+    <section id="apply">
+      <h2>申請加入封測</h2>
+      <p class="small">留下 Email，我們會寄送加入方式與最新任務。第一次送出會收到一封驗證信，請記得點擊確認。</p>
+
+      <form action="https://formspree.io/f/mqalgnlv" method="POST">
+        <input type="email" name="email" placeholder="你的 Email" required>
+        <input type="text" name="note" placeholder="想說的話（選填）">
+        <!-- 防機器人 -->
+        <input type="text" name="_gotcha" style="display:none">
+        <!-- 成功導回本頁顯示提示 -->
+        <input type="hidden" name="_subject" value="InkSoul 封測申請">
+        <input type="hidden" name="_next" value="https://hunt575758.github.io/draw-your-subconscious-privacy/?success=1">
+        <button class="cta" type="submit">送出申請</button>
+      </form>
+
+      <!-- 成功提示 -->
+      <script>
+        if (new URL(location.href).searchParams.get('success') === '1') {
+          const ok = document.createElement('p');
+          ok.className = 'ok';
+          ok.textContent = '✅ 已送出！請到信箱收確認信（第一次需要點擊驗證）。';
+          document.querySelector('#apply').appendChild(ok);
+        }
+      </script>
+    </section>
+
+    <!-- 其它資訊 -->
+    <section class="grid">
+      <div class="card">
+        <h2>線上課程 / 作品集</h2>
+        <p>鉛筆、彩鉛、水彩與油畫的入門路徑，搭配放鬆練習與示範。</p>
+      </div>
+      <div class="card">
+        <h2>隱私與安心</h2>
+        <p>上傳皆以匿名代碼保存，不做廣告追蹤。你可以隨時下載或刪除資料。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>© 2025 InkSoul</div>
+    <div class="small">聯絡我們：hello@yourdomain.com</div>
+  </footer>
+
+</body>
+</html>
