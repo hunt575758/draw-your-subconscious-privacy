@@ -62,6 +62,21 @@
       <p class="small">留下 Email，我們會寄送加入方式與最新任務。第一次送出會收到一封驗證信，請記得點擊確認。</p>
 
       <form action="https://formspree.io/f/mqalgnlv" method="POST">
+         <!-- 送出後跳轉到感謝頁 -->
+    <input type="hidden" name="_next" value="https://hunt575758.github.io/draw-your-subconscious-privacy/thank-you.html">
+
+    <label>
+        Your email:
+        <input type="email" name="email" required>
+    </label>
+
+    <label>
+        Your message:
+        <textarea name="message"></textarea>
+    </label>
+
+    <button type="submit">Send</button>
+</form>
         <input type="email" name="email" placeholder="你的 Email" required>
         <input type="text" name="note" placeholder="想說的話（選填）">
         <!-- 防機器人 -->
