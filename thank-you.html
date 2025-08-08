@@ -1,50 +1,74 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>感謝您的加入</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>感謝您的加入｜InkSoul</title>
+
+  <!-- 同首頁字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- 使用同一份樣式 -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- thank-you 頁面專屬微調 -->
   <style>
-    body {
-      margin: 0;
-      font-family: "Noto Sans TC", sans-serif;
-      background-color: #f3f9f4; /* 淺綠背景 */
-      color: #2f4f4f;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+    .center-screen{
+      min-height: 88vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .thank-card{
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg,#13271f 0%,#102019 100%);
+      border-radius: 16px;
+      padding: 28px 24px;
+      max-width: 720px;
       text-align: center;
+      box-shadow: 0 12px 40px rgba(0,0,0,.25);
     }
-    h1 {
-      font-size: 2.2rem;
-      color: #1d5c43;
+    .thank-title{
+      font-size: 28px;
+      margin: 0 0 8px;
     }
-    p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      color: #3a5a40;
+    .thank-note{
+      color: var(--muted);
+      margin: 6px 0 18px;
+      line-height: 1.7;
     }
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #3a5a40;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .btn:hover {
-      background-color: #2f4f4f;
-    }
+    .btns{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
   </style>
+
+  <!-- 分享預覽（可留可拿掉） -->
+  <meta property="og:title" content="感謝您的加入｜InkSoul">
+  <meta property="og:description" content="我們已收到您的申請，請到信箱點擊驗證信。">
+  <meta property="og:type" content="website">
 </head>
 <body>
-  <h1>🌿 感謝您的申請！</h1>
-  <p>我們已經收到您的資料，請到信箱收驗證信，並點擊確認。</p>
-  <a href="index.html" class="btn">返回首頁</a>
+
+  <main class="wrap center-screen">
+    <div class="thank-card">
+      <h1 class="thank-title">🌿 感謝您的申請！</h1>
+      <p class="thank-note">
+        我們已經收到您的資料。<br>
+        <strong>第一次送出</strong>會收到一封來自 Formspree 的驗證信，請到信箱點擊 <em>Verify</em> 完成確認。<br>
+        之後我們會把封測加入方式與最新任務寄給您。
+      </p>
+
+      <div class="btns">
+        <a class="cta" href="index.html">返回首頁</a>
+        <a class="ghost" href="mailto:hello@yourdomain.com">需要幫助？寫信給我們</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>© 2025 InkSoul｜畫出你的潛意識</div>
+    <div class="small">隱私與安心：上傳皆以匿名代碼保存，不做廣告追蹤。</div>
+  </footer>
+
 </body>
 </html>
